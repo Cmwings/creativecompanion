@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plain"
+    android:orientation="vertical"
+    tools:context=".ToDoList">
+
+    <EditText
+        android:id="@+id/idEdtType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Type"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idEdtBrand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Brand"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idEdtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Description"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idEdtSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Size"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idEdtQty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Quantity"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idEdtWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Website"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/idBtnAddEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Add Entry"
+        android:textAllCaps="false"
+        android:textStyle="bold" />
+
+</LinearLayout>
