@@ -3,6 +3,7 @@ package com.example.creativecompanion;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,19 +12,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Load the UI layout
+        setContentView(R.layout.activity_main);
+
         // setting up buttons
-        Button mediumButton = findViewById(R.id.Medium);
-        Button colorButton = findViewById(R.id.color);
-        Button ideaButton = findViewById(R.id.idea);
-        Button paperButton = findViewById(R.id.Paper);
-        Button drawingButton = findViewById(R.id.Drawing);
-        Button canvasButton = findViewById(R.id.Canvas);
-        Button toolsButton = findViewById(R.id.Tools);
-        Button projectsButton = findViewById(R.id.Projects);
-        Button moodButton = findViewById(R.id.Mood);
-        Button favoriteButton = findViewById(R.id.favorites);
-        Button todoButton = findViewById(R.id.todolist);
+        ImageButton mediumButton = findViewById(R.id.Medium);
+        ImageButton colorButton = findViewById(R.id.color);
+        ImageButton ideaButton = findViewById(R.id.idea);
+        ImageButton paperButton = findViewById(R.id.Paper);
+        ImageButton drawingButton = findViewById(R.id.Drawing);
+        ImageButton canvasButton = findViewById(R.id.Canvas);
+        ImageButton toolsButton = findViewById(R.id.Tools);
+        ImageButton projectsButton = findViewById(R.id.Projects);
+        ImageButton moodButton = findViewById(R.id.Mood);
+        ImageButton favoriteButton = findViewById(R.id.favorite);
+        ImageButton todoButton = findViewById(R.id.todolist);
 
         //on click listener to open new pages
         mediumButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Medium.class)));
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         toolsButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Tools.class)));
         projectsButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Projects.class)));
         moodButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Mood.class)));
-        favoriteButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Favorites.class)));
+        favoriteButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, Favorite.class)));
         todoButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ToDoList.class)));
     }
 }

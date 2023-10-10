@@ -56,7 +56,7 @@ public class ToDoList extends AppCompatActivity {
                 sizeEdt.setText("");
                 qtyEdit.setText("");
                 websiteEdt.setText("");
-                }
+            }
         });
 
 
