@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CreativeCompanion</string>
+    <string name="medium">Medium</string>
+    <string name="paper">paper</string>
+    <string name="drawing">drawing</string>
+    <string name="canvas">canvas</string>
+    <string name="tools">tools</string>
+    <string name="projects">projects</string>
+    <string name="mood">mood</string>
+    <string name="home">home</string>
+    <string name="favorite">favorite</string>
+    <string name="todo">todo</string>
+    <string name="idea">idea</string>
+    <string name="color">color</string>
+    <string name="title">title</string>
+</resources>
