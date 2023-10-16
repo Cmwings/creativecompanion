@@ -17,6 +17,7 @@
             android:id="@+id/user_list"
             android:layout_width="349dp"
             android:layout_height="wrap_content"
+            android:autoLink="web"
             android:layout_margin="10dp" />
 
     </FrameLayout>
