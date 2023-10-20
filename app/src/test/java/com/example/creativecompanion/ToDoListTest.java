@@ -18,13 +18,13 @@ public class ToDoListTest {
             activity.setDatabaseHelper(mockedDatabaseHelper);
 
             // Input data in EditText fields and click the add button
-            // ... (rest of your test)
+
 
             // Verify interactions with the mocked database helper
             Mockito.verify(mockedDatabaseHelper).addNewProduct(
                     "TestType", "TestBrand", "TestDescription", "TestSize", 5, "TestWebsite");
 
-            // TODO: You can add more assertions here to validate other behaviors.
+
         });
   } */
 }
