@@ -1,7 +1,8 @@
 package com.example.creativecompanion;
 
-public class ToDoListTest {
 /*
+public class ToDoListTest {
+
     @Rule
     public ActivityScenarioRule<ToDoList> activityRule = new ActivityScenarioRule<>(ToDoList.class);
 
@@ -11,7 +12,7 @@ public class ToDoListTest {
         ActivityScenario<ToDoList> scenario = activityRule.getScenario();
 
         // Mock your dependencies (e.g., MyDatabaseHelper)
-        MyDatabaseHelper mockedDatabaseHelper = Mockito.mock(MyDatabaseHelper.class);
+       MyDatabaseHelper mockedDatabaseHelper = Mockito.mock(MyDatabaseHelper.class);
 
         scenario.onActivity(activity -> {
             // Inject the mocked database helper into the activity
@@ -26,6 +27,6 @@ public class ToDoListTest {
 
 
         });
-  } */
-}
+    }
+}*/
 

@@ -1,10 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/plain"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:textAlignment="center"
     tools:context=".Projects">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey">
+
+        <EditText
+            android:id="@+id/addProject"
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+            android:layout_margin="10dp"
+            android:hint="@string/project_ideas"
+            android:importantForAutofill="no"
+            android:textStyle="bold" />
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/idBtnAddEntry"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_entry" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:translationY="10dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="335dp"
+        android:fontFamily="serif"
+        android:text="Coming Soon"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="48sp"
+        android:typeface="serif" />
+</LinearLayout>

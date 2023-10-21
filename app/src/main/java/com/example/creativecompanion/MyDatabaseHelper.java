@@ -1,10 +1,13 @@
 package com.example.creativecompanion;
 
+
+
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.Cursor;
+
 
 import java.util.ArrayList;
 
@@ -12,8 +15,9 @@ import java.util.ArrayList;
 public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "inventory.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     public static final String DATABASE_TABLE = "InventoryTable";
+    public static final String DATABASE_TABLE2 = "ProjectTable";
 
     public static final String COL_2 = "Type";
     public static final String COL_3 = "Brand";
@@ -22,20 +26,24 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_6 = "Qty";
     public static final String COL_7 = "Website";
 
+    public static final String COL_2_T_2 = "WofText";
+
 
     public MyDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-     //   SQLiteDatabase db = this.getWritableDatabase();
+
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, Type TEXT, Brand TEXT, Description TEXT, Size TEXT, Qty INTEGER, Website TEXT)");
-    }
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + DATABASE_TABLE2 + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, WofText TEXT)");
+        }
 
     public void addNewProduct(String type, String brand, String description, String size, Integer qty, String website) {
 
         SQLiteDatabase db = this.getWritableDatabase();
+
 
         ContentValues values = new ContentValues();
 
@@ -55,10 +63,31 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void addNewProject(String WofText) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+
+        // Passing values
+        values.put(COL_2_T_2, WofText);
+
+
+        // inserting data into database
+        db.insert(DATABASE_TABLE2, null, values);
+
+        // closing database
+        db.close();
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Handle upgrade of database, this will delete all data
-        db.execSQL("DROP TABLE IF EXISTS DATABASE_TABLE;");
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE + ";");
+        db.execSQL("DROP TABLE IF EXISTS " + DATABASE_TABLE2 + ";");
+
+
         onCreate(db);
     }
 
@@ -101,6 +130,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             String column7Value = cursor.getString(cursor.getColumnIndexOrThrow(MyDatabaseHelper.COL_7));
             String col7Text = "Website: ";
             list.add(col7Text + column7Value);
+            String colBreak = "-----------------------------------------";
+            list.add(colBreak);
+
 
         }
         cursor.close();
@@ -108,8 +140,30 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         return list;
 
 
-        }
+    }
 
+    public ArrayList<String> getProject() {
+        ArrayList<String> list = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String[] projection = {
+                MyDatabaseHelper.COL_2_T_2
+        };
+
+        Cursor cursor = db.query(MyDatabaseHelper.DATABASE_TABLE2, projection,
+                null, null, null, null, null, null);
+
+        while (cursor.moveToNext()){
+            String column2Value = cursor.getString(cursor.getColumnIndexOrThrow(MyDatabaseHelper.COL_2_T_2));
+            String col2Text = "Project: ";
+            list.add(col2Text + column2Value);
+            String colBreak = "-----------------------------------------";
+            list.add(colBreak);
+        }
+        cursor.close();
+
+        return list;
+    }
 
 
 }

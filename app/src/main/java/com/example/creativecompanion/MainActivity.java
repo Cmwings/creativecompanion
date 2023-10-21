@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         // setting up buttons
         ImageButton mediumButton = findViewById(R.id.Medium);
         ImageButton colorButton = findViewById(R.id.color);

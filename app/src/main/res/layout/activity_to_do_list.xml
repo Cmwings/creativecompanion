@@ -18,7 +18,7 @@
             android:layout_width="349dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="@string/enter_type"
+            android:hint="Enter Type: Medium/Paper/Drawing/Canvas/Tools"
             android:textStyle="bold" />
     </FrameLayout>
 

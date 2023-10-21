@@ -20,4 +20,7 @@
     <string name="enter_description">Enter Description</string>
     <string name="enter_brand">Enter Brand</string>
     <string name="enter_type">Enter Type</string>
+    <string name="paint">paint</string>
+    <string name="project_ideas">Project Ideas</string>
+    <string name="coming_soon">Coming Soon</string>
 </resources>
